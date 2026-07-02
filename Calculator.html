@@ -106,7 +106,7 @@
       <button class="btn-operator" id="op-×" onclick="pressOperator('×')">×</button>
 
       <button class="btn-number" onclick="pressNumber('4')">4</button>
-      <button class="btn-number" onclick="pressNumber('5')">5</button>~
+      <button class="btn-number" onclick="pressNumber('5')">5</button>
       <button class="btn-number" onclick="pressNumber('6')">6</button>
       <button class="btn-operator" id="op-−" onclick="pressOperator('−')">−</button>
 
@@ -133,7 +133,6 @@
 
     function updateDisplay(value) {
       display.textContent = value;
-      // Auto shrink font for long numbers
       if (value.toString().length > 9) {
         display.style.fontSize = '32px';
       } else if (value.toString().length > 6) {
@@ -159,7 +158,6 @@
     }
 
     function pressOperator(op) {
-      // Remove active from all operators
       document.querySelectorAll('.btn-operator').forEach(b => b.classList.remove('active'));
       document.getElementById('op-' + op).classList.add('active');
 
@@ -189,7 +187,6 @@
         result = num1 / num2;
       }
 
-      // Round to avoid floating point issues
       result = parseFloat(result.toFixed(10));
 
       if (!chaining) {
