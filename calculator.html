@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .calculator {
+      background: #000;
+      border-radius: 40px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    }
+    .display {
+      padding: 30px 15px 20px;
+      text-align: right;
+    }
+    .expression {
+      color: #666;
+      font-size: 20px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .result {
+      color: white;
+      font-size: 64px;
+      font-weight: 300;
+      letter-spacing: -2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+    button {
+      border: none;
+      border-radius: 50%;
+      width: 68px;
+      height: 68px;
+      font-size: 22px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    button:active { opacity: 0.6; transform: scale(0.95); }
+    .btn-special { background: #a5a5a5; color: #000; font-weight: 600; }
+    .btn-operator { background: #ff9f0a; color: white; font-size: 28px; }
+    .btn-operator.active { background: white; color: #ff9f0a; }
+    .btn-number { background: #333; color: white; }
+    .btn-zero {
+      background: #333;
+      color: white;
+      border-radius: 34px;
+      width: 100%;
+      grid-column: span 2;
+      text-align: left;
+      padding-left: 26px;
+      font-size: 22px;
+    }
+    .btn-equal { background: #ff9f0a; color: white; font-size: 28px; }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </div>
+    <div class="buttons">
+      <button class="btn-special" onclick="clearAll()">AC</button>
+      <button class="btn-special" onclick="toggleSign()">+/-</button>
+      <button class="btn-special" onclick="percentage()">%</button>
+      <button class="btn-operator" id="op-div" onclick="pressOperator('/')">÷</button>
+
+      <button class="btn-number" onclick="pressNumber('7')">7</button>
+      <button class="btn-number" onclick="pressNumber('8')">8</button>
+      <button class="btn-number" onclick="pressNumber('9')">9</button>
+      <button class="btn-operator" id="op-mul" onclick="pressOperator('*')">×</button>
+
+      <button class="btn-number" onclick="pressNumber('4')">4</button>
+      <button class="btn-number" onclick="pressNumber('5')">5</button>
+      <button class="btn-number" onclick="pressNumber('6')">6</button>
+      <button class="btn-operator" id="op-sub" onclick="pressOperator('-')">−</button>
+
+      <button class="btn-number" onclick="pressNumber('1')">1</button>
+      <button class="btn-number" onclick="pressNumber('2')">2</button>
+      <button class="btn-number" onclick="pressNumber('3')">3</button>
+      <button class="btn-operator" id="op-add" onclick="pressOperator('+')">+</button>
+
+      <button class="btn-zero" onclick="pressNumber('0')">0</button>
+      <button class="btn-number" onclick="pressNumber('.')">.</button>
+      <button class="btn-equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let current = '0';
+    let previous = '';
+    let op = '';
+    let reset = false;
+
+    const display = document.getElementById('result');
+    const expr = document.getElementById('expression');
+
+    function updateDisplay(val) {
+      display.textContent = val;
+      if (val.toString().length > 9) display.style.fontSize = '32px';
+      else if (val.toString().length > 6) display.style.fontSize = '48px';
+      else display.style.fontSize = '64px';
+    }
+
+    function pressNumber(num) {
+      if (reset) { current = num; reset = false; }
+      else {
+        if (num === '.' && current.includes('.')) return;
+        current = current === '0' && num !== '.' ? num : current + num;
+      }
+      updateDisplay(current);
+    }
+
+    function pressOperator(o) {
+      document.querySelectorAll('.btn-operator').forEach(b => b.classList.remove('active'));
+      document.getElementById('op-' + (o === '+' ? 'add' : o === '-' ? 'sub' : o === '*' ? 'mul' : 'div')).classList.add('active');
+      if (previous !== '' && !reset) calculate(true);
+      previous = current;
+      op = o;
+      expr.textContent = current + ' ' + (o === '+' ? '+' : o === '-' ? '−' : o === '*' ? '×' : '÷');
+      reset = true;
+    }
+
+    function calculate(chain = false) {
+      if (!previous || !op) return;
+      let n1 = parseFloat(previous);
+      let n2 = parseFloat(current);
+      let result;
+      if (op === '+') result = n1 + n2;
+      else if (op === '-') result = n1 - n2;
+      else if (op === '*') result = n1 * n2;
+      else if (op === '/') {
+        if (n2 === 0) { updateDisplay('Error'); return; }
+        result = n1 / n2;
+      }
+      result = parseFloat(result.toFixed(10));
+      if (!chain) {
+        expr.textContent = previous + ' ' + (op === '+' ? '+' : op === '-' ? '−' : op === '*' ? '×' : '÷') + ' ' + current + ' =';
+        op = '';
+        previous = '';
+        document.querySelectorAll('.btn-operator').forEach(b => b.classList.remove('active'));
+      }
+      current = result.toString();
+      updateDisplay(result);
+      reset = !chain;
+    }
+
+    function clearAll() {
+      current = '0'; previous = ''; op = '';
+      expr.textContent = '';
+      updateDisplay('0');
+      document.querySelectorAll('.btn-operator').forEach(b => b.classList.remove('active'));
+    }
+
+    function toggleSign() {
+      current = (parseFloat(current) * -1).toString();
+      updateDisplay(current);
+    }
+
+    function percentage() {
+      current = (parseFloat(current) / 100).toString();
+      updateDisplay(current);
+    }
+  </script>
+</body>
+</html>
