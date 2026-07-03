@@ -47,38 +47,19 @@
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(12px);
     }
-    .logo {
-      font-family: 'Fira Code', monospace;
-      font-size: 1rem;
-      color: var(--accent);
-    }
+    .logo { font-family: 'Fira Code', monospace; font-size: 1rem; color: var(--accent); }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-    .nav-links a {
-      color: var(--text2);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
     .theme-toggle {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 6px 14px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      color: var(--text2);
-      font-family: 'Fira Code', monospace;
-      transition: all 0.2s;
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 50px;
+      padding: 6px 14px; cursor: pointer; font-size: 0.8rem; color: var(--text2);
+      font-family: 'Fira Code', monospace; transition: all 0.2s;
     }
     .theme-toggle:hover { color: var(--text); border-color: var(--accent); }
     .hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      padding: 6rem 2rem 4rem;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 6rem 2rem 4rem; position: relative; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
@@ -87,45 +68,24 @@
     }
     .hero-content { text-align: center; max-width: 700px; position: relative; z-index: 1; }
     .hero-tag {
-      display: inline-block;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.8rem;
-      color: var(--accent);
-      background: var(--glow);
-      border: 1px solid rgba(124,106,255,0.3);
-      padding: 6px 16px;
-      border-radius: 50px;
-      margin-bottom: 1.5rem;
+      display: inline-block; font-family: 'Fira Code', monospace; font-size: 0.8rem;
+      color: var(--accent); background: var(--glow); border: 1px solid rgba(124,106,255,0.3);
+      padding: 6px 16px; border-radius: 50px; margin-bottom: 1.5rem;
       animation: fadeDown 0.6s ease both;
     }
     .hero h1 {
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-      animation: fadeDown 0.7s ease 0.1s both;
+      font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 700; line-height: 1.1;
+      margin-bottom: 1rem; animation: fadeDown 0.7s ease 0.1s both;
     }
     .hero h1 span { color: var(--accent); }
     .hero-sub {
-      font-size: 1.1rem;
-      color: var(--text2);
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
+      font-size: 1.1rem; color: var(--text2); margin-bottom: 2.5rem; line-height: 1.7;
       animation: fadeDown 0.7s ease 0.2s both;
     }
-    .hero-cta {
-      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-      animation: fadeDown 0.7s ease 0.3s both;
-    }
+    .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeDown 0.7s ease 0.3s both; }
     .btn {
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
+      padding: 12px 28px; border-radius: 8px; font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none; transition: all 0.2s;
       font-family: 'Space Grotesk', sans-serif;
     }
     .btn-primary { background: var(--accent); color: white; }
@@ -134,56 +94,51 @@
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
     section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
     .section-label {
-      font-family: 'Fira Code', monospace;
-      font-size: 0.75rem;
-      color: var(--accent);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--accent);
+      letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem;
     }
-    .section-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 700;
-      margin-bottom: 3rem;
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .about-text p {
-      color: var(--text2);
-      line-height: 1.8;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-    }
+    .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 3rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .about-text p { color: var(--text2); line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
     .about-text p span { color: var(--accent); font-weight: 600; }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .stat-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.25rem; text-align: center; transition: border-color 0.2s, transform 0.2s;
     }
     .stat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .stat-num {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--accent);
+    .stat-num { font-size: 1.75rem; font-weight: 700; color: var(--accent); font-family: 'Fira Code', monospace; }
+    .stat-label { font-size: 0.8rem; color: var(--text2); margin-top: 4px; }
+    .intern-section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
+    .intern-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.75rem; margin-bottom: 1rem; position: relative; overflow: hidden; transition: all 0.2s;
+    }
+    .intern-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+    }
+    .intern-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .intern-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+    .intern-company { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .intern-role { font-size: 0.85rem; color: var(--accent); font-weight: 500; margin-top: 2px; }
+    .intern-date {
+      font-family: 'Fira Code', monospace; font-size: 0.72rem; color: var(--text2);
+      background: var(--bg3); border: 1px solid var(--border); padding: 4px 10px; border-radius: 6px;
+    }
+    .intern-desc { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
+    .active-badge {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 1rem;
+      background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 50px; padding: 4px 12px; font-size: 0.72rem; color: #22c55e;
       font-family: 'Fira Code', monospace;
     }
-    .stat-label { font-size: 0.8rem; color: var(--text2); margin-top: 4px; }
+    .green-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
     .skill-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem 1rem;
-      text-align: center;
-      transition: all 0.2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.25rem 1rem; text-align: center; transition: all 0.2s;
     }
     .skill-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 24px var(--glow); }
     .skill-icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
@@ -191,35 +146,20 @@
     .skill-level { font-size: 0.7rem; color: var(--accent); font-family: 'Fira Code', monospace; margin-top: 4px; }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
     .project-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.5rem; transition: all 0.3s; position: relative; overflow: hidden;
     }
     .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
-      transform: scaleX(0);
-      transition: transform 0.3s;
+      transform: scaleX(0); transition: transform 0.3s;
     }
     .project-card:hover::before { transform: scaleX(1); }
     .project-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 32px var(--glow); }
     .project-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-family: 'Fira Code', monospace;
-      color: var(--accent);
-      background: var(--glow);
-      border: 1px solid rgba(124,106,255,0.2);
-      padding: 3px 10px;
-      border-radius: 50px;
-      margin-bottom: 0.75rem;
+      display: inline-block; font-size: 0.7rem; font-family: 'Fira Code', monospace;
+      color: var(--accent); background: var(--glow); border: 1px solid rgba(124,106,255,0.2);
+      padding: 3px 10px; border-radius: 50px; margin-bottom: 0.75rem;
     }
     .project-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
     .project-desc { font-size: 0.875rem; color: var(--text2); line-height: 1.7; margin-bottom: 1.25rem; }
@@ -229,19 +169,11 @@
     .project-link { font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; transition: opacity 0.2s; }
     .project-link:hover { opacity: 0.7; }
     .contact-wrapper {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+      padding: 3rem; text-align: center; position: relative; overflow: hidden;
     }
     .contact-wrapper::before {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
       background: radial-gradient(ellipse 40% 40% at 50% 50%, var(--glow), transparent);
       pointer-events: none;
     }
@@ -249,30 +181,16 @@
     .contact-wrapper p { color: var(--text2); margin-bottom: 2rem; font-size: 0.95rem; }
     .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .contact-link {
-      display: flex; align-items: center; gap: 8px;
-      padding: 10px 20px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: all 0.2s;
+      display: flex; align-items: center; gap: 8px; padding: 10px 20px;
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 8px;
+      color: var(--text); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: all 0.2s;
     }
     .contact-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
     footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text2);
-      font-size: 0.8rem;
-      font-family: 'Fira Code', monospace;
-      border-top: 1px solid var(--border);
+      text-align: center; padding: 2rem; color: var(--text2);
+      font-size: 0.8rem; font-family: 'Fira Code', monospace; border-top: 1px solid var(--border);
     }
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     @media (max-width: 640px) {
@@ -280,7 +198,9 @@
       nav { padding: 1rem; }
       .nav-links { gap: 1rem; }
       section { padding: 3rem 1.25rem; }
+      .intern-section { padding: 3rem 1.25rem; }
       .contact-wrapper { padding: 2rem 1.25rem; }
+      .intern-header { flex-direction: column; gap: 0.5rem; }
     }
   </style>
 </head>
@@ -290,6 +210,7 @@
   <div class="logo">&lt;shresth /&gt;</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#internship">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -300,7 +221,7 @@
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-tag">👋 Open to internships</div>
+    <div class="hero-tag">👋 Open to internships · Currently interning at CodeAlpha</div>
     <h1>Hi, I'm <span>Shresth</span><br>Frontend Developer</h1>
     <p class="hero-sub">BCA 2nd year student at MJPRU · Building real projects with HTML, CSS & JavaScript · Learning Full Stack Development</p>
     <div class="hero-cta">
@@ -318,20 +239,20 @@
   <div class="about-grid reveal">
     <div class="about-text">
       <p>I'm <span>Shresth Saxena</span>, a BCA 2nd year student from Bareilly, UP. I'm on a mission to become a Full Stack Developer by building real projects from scratch.</p>
-      <p>Currently learning <span>Full Stack Web Development</span> through Hitesh Choudhary's course on Udemy. I believe in learning by doing — every concept I learn, I turn into a project.</p>
+      <p>Currently doing a <span>Frontend Development Internship at CodeAlpha</span> while learning Full Stack Web Development through Hitesh Choudhary's course on Udemy.</p>
       <p>When I'm not coding, I'm at the <span>gym</span> — because discipline in fitness and discipline in code are the same thing.</p>
     </div>
     <div class="about-stats">
       <div class="stat-card">
-        <div class="stat-num">3+</div>
+        <div class="stat-num">5+</div>
         <div class="stat-label">Projects built</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">50h+</div>
-        <div class="stat-label">Course hours</div>
+        <div class="stat-num">1</div>
+        <div class="stat-label">Internship</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">824</div>
+        <div class="stat-num">826+</div>
         <div class="stat-label">LinkedIn followers</div>
       </div>
       <div class="stat-card">
@@ -341,6 +262,26 @@
     </div>
   </div>
 </section>
+
+<div class="intern-section" id="internship">
+  <div class="reveal">
+    <div class="section-label">// experience</div>
+    <h2 class="section-title">Internship</h2>
+  </div>
+  <div class="reveal">
+    <div class="intern-card">
+      <div class="intern-header">
+        <div>
+          <div class="intern-company">CodeAlpha</div>
+          <div class="intern-role">Frontend Development Intern</div>
+        </div>
+        <div class="intern-date">Jul 2026 — Jul 2026</div>
+      </div>
+      <div class="intern-desc">Working on frontend tasks including Calculator and Portfolio Website using HTML, CSS, and JavaScript. Building real projects and deploying live on GitHub Pages.</div>
+      <div class="active-badge"><span class="green-dot"></span> Currently Active</div>
+    </div>
+  </div>
+</div>
 
 <section id="skills">
   <div class="reveal">
@@ -377,6 +318,16 @@
       <div class="skill-icon">📐</div>
       <div class="skill-name">Flexbox & Grid</div>
       <div class="skill-level">strong</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚛️</div>
+      <div class="skill-name">React</div>
+      <div class="skill-level">upcoming</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🟢</div>
+      <div class="skill-name">Node.js</div>
+      <div class="skill-level">upcoming</div>
     </div>
   </div>
 </section>
@@ -429,14 +380,42 @@
         <a href="https://github.com/indojinOff/signup-Page" target="_blank" class="project-link">⌥ GitHub</a>
       </div>
     </div>
-    <div class="project-card" style="border-style: dashed; opacity: 0.6;">
-      <div class="project-tag">coming soon</div>
-      <div class="project-title">Calculator</div>
-      <p class="project-desc">iPhone style calculator — currently building with JavaScript! 🚀</p>
+    <div class="project-card">
+      <div class="project-tag">project 04</div>
+      <div class="project-title">iPhone Calculator</div>
+      <p class="project-desc">iPhone style calculator with all arithmetic operations, expression display, operator highlighting, and division-by-zero handling.</p>
       <div class="project-tech">
         <span class="tech-tag">HTML</span>
         <span class="tech-tag">CSS</span>
         <span class="tech-tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://indojinoff.github.io/signup-Page/Calculator.html" target="_blank" class="project-link">↗ Live demo</a>
+        <a href="https://github.com/indojinOff/codealpha_tasks" target="_blank" class="project-link">⌥ GitHub</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">project 05</div>
+      <div class="project-title">Portfolio Website</div>
+      <p class="project-desc">This portfolio — built with HTML, CSS & JS. Features dark/light toggle, scroll animations, and deployed on GitHub Pages.</p>
+      <div class="project-tech">
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://indojinoff.github.io/signup-Page/Portfolio.html" target="_blank" class="project-link">↗ Live demo</a>
+        <a href="https://github.com/indojinOff/signup-Page" target="_blank" class="project-link">⌥ GitHub</a>
+      </div>
+    </div>
+    <div class="project-card" style="border-style: dashed; opacity: 0.5;">
+      <div class="project-tag">coming soon</div>
+      <div class="project-title">More Projects 🚀</div>
+      <p class="project-desc">Building more with JavaScript, React, and Node.js. Stay tuned!</p>
+      <div class="project-tech">
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Node.js</span>
       </div>
     </div>
   </div>
@@ -474,7 +453,6 @@
       btn.textContent = '☀ light';
     }
   }
-
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
